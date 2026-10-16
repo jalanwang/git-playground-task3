@@ -46,10 +46,11 @@ function main() {
       break;
     }
     case "count": {
-      console.log("you have 3 notes");
+      console.log(`You have ${store.all().length} notes`);
+      break;
     }
     default:
-      console.log("Commands: add <text> | list | search <term> | delete <id>");
+      console.log("Commands: add <text> | list | search <term> | delete <id> | count");
       console.log(`(Session locks after ${config.SESSION_TIMEOUT_MINUTES} minutes of inactivity.)`);
   }
 }
